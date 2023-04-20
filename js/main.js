@@ -1,4 +1,20 @@
 
+$(".header__burgir").click(function() {
+    if($(".header__burgir").hasClass("active")) {
+        $(".header__burgir").removeClass("rotate");
+        setTimeout(function(){
+            $(".header__burgir").removeClass("active");
+        },300);
+        $(".header__navbar").removeClass("open");
+    } else {
+        $(".header__burgir").addClass("active");
+        setTimeout(function(){
+            $(".header__burgir").addClass("rotate");
+        },300);
+        $(".header__navbar").addClass("open");
+    }
+    
+});
 if (window.innerWidth < 768) {
     $(window).scroll(function(){
         if ( $(this).scrollTop() > 280) {
