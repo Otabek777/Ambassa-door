@@ -103,6 +103,7 @@ ul, ol {
     line-height: 20px;
     color: #1A1A1A;
     transition: all .3s ease;
+    cursor: pointer;
     svg {
         margin-right: 14px;
     }
@@ -212,9 +213,6 @@ ul, ol {
     }
 }
 .modal__block {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     max-width: 650px;
     width: 100%;
     margin: 0 auto;
@@ -224,6 +222,11 @@ ul, ol {
     position: relative;
     transform: scale(0.2);
     transition: all .5s ease;
+}
+.modal__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 .modal__input {
     width: calc(50% - 4px);

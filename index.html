@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="slick-1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" href="slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
     <title></title>
@@ -105,19 +106,22 @@
     <div class="modal">
         <div class="modal__block">
             <button class="close"></button>
-            <h5>Заказать обратный звонок</h5>
-            <h6>Заполните форму и мы свяжемся с вами в ближайшее время</h6>
-            <div class="modal__input">
-                <input type="text" placeholder="Ваше имя">
-            </div>
-            <div class="modal__input">
-                <input type="text" placeholder="Ваш телефон" class="tel input_phone">
-            </div>
-            <div class="modal__btn">
-                <button class="btn2">Отправить</button>
-                <a href="#">Политика конфиденциальности</a>
-            </div>
-           
+            <form action="">
+                <div class="modal__wrap">
+                    <h5>Заказать обратный звонок</h5>
+                    <h6>Заполните форму и мы свяжемся с вами в ближайшее время</h6>
+                    <div class="modal__input">
+                        <input type="text" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="modal__input">
+                        <input type="text" placeholder="Ваш телефон" class="tel input_phone" required>
+                    </div>
+                    <div class="modal__btn">
+                        <button class="btn2">Отправить</button>
+                        <a href="#">Политика конфиденциальности</a>
+                    </div>
+                </div>
+            </form>        
         </div>
     </div>
     <main class="main">
@@ -176,21 +180,23 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="banner__form">
-                        <p>Получите бесплатную консультацию специалиста</p>
-                        <div class="input">
-                            <input type="text" placeholder="Ваше имя">
+                    <form action="">
+                        <div class="banner__form">
+                            <p>Получите бесплатную консультацию специалиста</p>
+                            <div class="input">
+                                <input type="text" placeholder="Ваше имя" required>
+                            </div>
+                            <div class="input">
+                                <input type="text" placeholder="Ваш телефон" class="tel input_phone" required>
+                            </div>
+                            <button class="btn2">получить консультацию
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="21" viewBox="0 0 14 21" fill="none">
+                                    <path d="M12.3945 13.4993H8.04336L10.3333 19.0771C10.4928 19.4638 10.3105 19.8974 9.94595 20.0615L7.92942 20.9403C7.55351 21.1044 7.13196 20.9169 6.97245 20.5419L4.79645 15.2453L1.24187 18.9013C0.768181 19.3885 0 19.0129 0 18.374V0.750534C0 0.077878 0.817072 -0.250042 1.24183 0.223237L12.9072 12.222C13.3777 12.6805 13.0305 13.4993 12.3945 13.4993Z" fill="white"/>
+                                </svg>
+                            </button>
+                            <span><a href="#">Политика конфиденциальности</a></span>
                         </div>
-                        <div class="input">
-                            <input type="text" placeholder="Ваш телефон" class="tel input_phone">
-                        </div>
-                        <button class="btn2">получить консультацию
-                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="21" viewBox="0 0 14 21" fill="none">
-                                <path d="M12.3945 13.4993H8.04336L10.3333 19.0771C10.4928 19.4638 10.3105 19.8974 9.94595 20.0615L7.92942 20.9403C7.55351 21.1044 7.13196 20.9169 6.97245 20.5419L4.79645 15.2453L1.24187 18.9013C0.768181 19.3885 0 19.0129 0 18.374V0.750534C0 0.077878 0.817072 -0.250042 1.24183 0.223237L12.9072 12.222C13.3777 12.6805 13.0305 13.4993 12.3945 13.4993Z" fill="white"/>
-                            </svg>
-                        </button>
-                        <span><a href="#">Политика конфиденциальности</a></span>
-                    </div>
+                    </form>
                 </div>
             </div>
         </section>
@@ -199,9 +205,9 @@
                 <h2>Композитная дверь</h2>
                 <h4>Комплектация дверей может быть разная. Мы учтём все пожелания</h4>
                 <div class="doors__box">
-                    <div class="doors__img">
-                        <img src="img/doors.png" alt="">
-                    </div>
+                    <a href="img/doors.png" data-fancybox="gal" class="doors__img">
+                        <img src="img/doors.png" alt="Image" class="img-fluid">
+                    </a>
                     <div class="doors__wrap">
                         <div class="doors__check">
                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
@@ -273,28 +279,28 @@
                             <img src="img/services-1.png" alt="">
                         </div>
                         <p>Школы, детские сады, ВУЗы</p>
-                        <a href="#" class="main__btn">Заказать</a>
+                        <button class="main__btn modal-open">Заказать</button>
                     </div>
                     <div class="services__block">
                         <div class="services__img">
                             <img src="img/services-2.png" alt="">
                         </div>
                         <p>Бассейны, СПА, санатории</p>
-                        <a href="#" class="main__btn">Заказать</a>
+                        <button" class="main__btn modal-open">Заказать</button>
                     </div>
                     <div class="services__block">
                         <div class="services__img">
                             <img src="img/services-3.png" alt="">
                         </div>
                         <p>Спорткомплексы, торговые и бизнес-центры</p>
-                        <a href="#" class="main__btn">Заказать</a>
+                        <button class="main__btn modal-open">Заказать</button>
                     </div>
                     <div class="services__block">
                         <div class="services__img">
                             <img src="img/services-4.png" alt="">
                         </div>
                         <p>Больницы, поликлиники, оздоровительные центры</p>
-                        <a href="#" class="main__btn">Заказать</a>
+                        <button class="main__btn modal-open">Заказать</button>
                     </div>
                 </div>
             </div>
@@ -401,42 +407,42 @@
                             <img src="img/door-1.png" alt="">
                         </div>
                         <h3>Царговые двери</h3>
-                        <a href="#" class="main__btn">Заказать</a>
+                        <button class="main__btn modal-open">Заказать</button>
                     </div>
                     <div class="products__block">
                         <div class="products__img">
                             <img src="img/door-2.png" alt="">
                         </div>
                         <h3>Двери CPL/НPL</h3>
-                        <a href="#" class="main__btn">Заказать</a>
+                        <button class="main__btn modal-open">Заказать</button>
                     </div>
                     <div class="products__block">
                         <div class="products__img">
                             <img src="img/door-3.png" alt="">
                         </div>
                         <h3>Противопожарные двери</h3>
-                        <a href="#" class="main__btn">Заказать</a>
+                        <button class="main__btn modal-open">Заказать</button>
                     </div>
                     <div class="products__block">
                         <div class="products__img">
                             <img src="img/door-4.png" alt="">
                         </div>
                         <h3>Металлические двери</h3>
-                        <a href="#" class="main__btn">Заказать</a>
+                        <button class="main__btn modal-open">Заказать</button>
                     </div>
                     <div class="products__block">
                         <div class="products__img">
                             <img src="img/door-5.png" alt="">
                         </div>
                         <h3>Двери для стерильных (чистых) помещений</h3>
-                        <a href="#" class="main__btn">Заказать</a>
+                        <button class="main__btn modal-open">Заказать</button>
                     </div>
                     <div class="products__block">
                         <div class="products__img">
                             <img src="img/door-6.png" alt="">
                         </div>
                         <h3>Рентгенозащитные двери и т.д.</h3>
-                        <a href="#" class="main__btn">Заказать</a>
+                        <button class="main__btn modal-open">Заказать</button>
                     </div>
                 </div>
             </div>
@@ -497,21 +503,23 @@
                         <h2>Появились вопросы?</h2>
                         <h6>Получите бесплатную консультацию специалиста!</h6>
                     </div>
-                    <div class="banner__form">
-                        <p>Получите бесплатную консультацию специалиста</p>
-                        <div class="input">
-                            <input type="text" placeholder="Ваше имя">
+                    <form action="">
+                        <div class="banner__form">
+                            <p>Получите бесплатную консультацию специалиста</p>
+                            <div class="input">
+                                <input type="text" placeholder="Ваше имя" required>
+                            </div>
+                            <div class="input">
+                                <input type="text" placeholder="Ваш телефон" class="tel input_phone" required>
+                            </div>
+                            <button class="btn2">получить консультацию
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="21" viewBox="0 0 14 21" fill="none">
+                                    <path d="M12.3945 13.4993H8.04336L10.3333 19.0771C10.4928 19.4638 10.3105 19.8974 9.94595 20.0615L7.92942 20.9403C7.55351 21.1044 7.13196 20.9169 6.97245 20.5419L4.79645 15.2453L1.24187 18.9013C0.768181 19.3885 0 19.0129 0 18.374V0.750534C0 0.077878 0.817072 -0.250042 1.24183 0.223237L12.9072 12.222C13.3777 12.6805 13.0305 13.4993 12.3945 13.4993Z" fill="white"/>
+                                </svg>
+                            </button>
+                            <span><a href="#">Политика конфиденциальности</a></span>
                         </div>
-                        <div class="input">
-                            <input type="text" placeholder="Ваш телефон" class="tel input_phone">
-                        </div>
-                        <button class="btn2">получить консультацию
-                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="21" viewBox="0 0 14 21" fill="none">
-                                <path d="M12.3945 13.4993H8.04336L10.3333 19.0771C10.4928 19.4638 10.3105 19.8974 9.94595 20.0615L7.92942 20.9403C7.55351 21.1044 7.13196 20.9169 6.97245 20.5419L4.79645 15.2453L1.24187 18.9013C0.768181 19.3885 0 19.0129 0 18.374V0.750534C0 0.077878 0.817072 -0.250042 1.24183 0.223237L12.9072 12.222C13.3777 12.6805 13.0305 13.4993 12.3945 13.4993Z" fill="white"/>
-                            </svg>
-                        </button>
-                        <span><a href="#">Политика конфиденциальности</a></span>
-                    </div>
+                    </form>
                 </div>
             </div>
         </section>
@@ -536,7 +544,7 @@
                         г. Новосибирск, ул. Некрасова, 48, оф. 301
                     </p>
                 </div>
-                <button class="footer__call main__btn">
+                <button class="footer__call main__btn modal-open">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                         <path d="M15.5437 11.3062L12.0437 9.80614C11.8941 9.74242 11.728 9.72899 11.5701 9.76788C11.4123 9.80677 11.2714 9.89587 11.1686 10.0218L9.61861 11.9156C7.18599 10.7686 5.22828 8.81089 4.08132 6.37827L5.97511 4.82824C6.10126 4.72564 6.19055 4.58473 6.22945 4.42684C6.26836 4.26896 6.25477 4.10269 6.19074 3.95322L4.69071 0.453162C4.62043 0.292037 4.49613 0.160484 4.33925 0.0811864C4.18237 0.00188914 4.00273 -0.0201818 3.83132 0.0187795L0.58126 0.768793C0.415998 0.806955 0.26855 0.900007 0.162983 1.03276C0.0574152 1.16552 -3.80697e-05 1.33013 1.8926e-08 1.49974C1.8926e-08 9.51551 6.49699 16 14.5003 16C14.6699 16.0001 14.8346 15.9427 14.9674 15.8371C15.1002 15.7315 15.1933 15.5841 15.2315 15.4187L15.9815 12.1687C16.0202 11.9964 15.9977 11.8161 15.9178 11.6587C15.8379 11.5012 15.7056 11.3766 15.5437 11.3062Z" fill="#1A1A1A"/>
                     </svg>
@@ -552,6 +560,7 @@
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/SmoothScroll.js"></script>
     <script src="slick-1.8.1/slick/slick.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/main.js"></script>
     <script>
         if (window.innerWidth < 768) {
