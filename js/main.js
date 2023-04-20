@@ -1,3 +1,34 @@
+
+if (window.innerWidth < 768) {
+    $(window).scroll(function(){
+        if ( $(this).scrollTop() > 280) {
+            $('.header').addClass("fixed");
+        } else {
+            $('.header').removeClass("fixed");
+        }
+    });
+} else {
+    $(window).scroll(function(){
+        if ( $(this).scrollTop() > 130) {
+            $('.header').addClass("fixed");
+        } else {
+            $('.header').removeClass("fixed");
+        }
+    });
+}
+$(".modal-open").click(function() {
+    $(".modal").addClass("active");
+    setTimeout(function() {
+        $(".modal").addClass("opacity");
+    },1);
+});
+$(".modal .close").click(function() {
+    $(".modal").removeClass("opacity");
+    setTimeout(function() {
+        $(".modal").removeClass("active");
+    },500);
+});
+
 if(document.querySelector('.input_phone')) {
     window.addEventListener("DOMContentLoaded", function() {
         [].forEach.call( document.querySelectorAll('.tel'), function(input) {
