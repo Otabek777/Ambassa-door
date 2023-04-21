@@ -15,6 +15,13 @@ $(".header__burgir").click(function() {
     }
     
 });
+$(function(){
+    $('a').click(function(){
+         var target = $(this).attr('href');
+         $('html, body').animate({scrollTop: $(target).offset().top}, 800);
+         return false; 
+    }); 
+});
 if (window.innerWidth < 768) {
     $(window).scroll(function(){
         if ( $(this).scrollTop() > 280) {
@@ -83,3 +90,14 @@ if(document.querySelector('.input_phone')) {
     
     });
 };
+
+$(".Fastnum").counterUp({delay:50,time:4000});
+if (window.innerWidth < 768) {
+    $('.products__box').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: true
+    });
+};  

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <link rel="stylesheet" href="slick-1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" href="slick-1.8.1/slick/slick.css">
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
@@ -53,19 +54,19 @@
                         <div class="header__navbar">
                             <ul>
                                 <li>
-                                    <a href="#">О двери</a>
+                                    <a href="#doors">О двери</a>
                                 </li>
                                 <li>
-                                    <a href="#">Объекты</a>
+                                    <a href="#services">Объекты</a>
                                 </li>
                                 <li>
-                                    <a href="#">Преимущества</a>
+                                    <a href="#advantages">Преимущества</a>
                                 </li>
                                 <li>
-                                    <a href="#">О компании</a>
+                                    <a href="#company">О компании</a>
                                 </li>
                                 <li>
-                                    <a href="#">контакты</a>
+                                    <a href="#contacts">контакты</a>
                                 </li>
                             </ul>
                         </div>
@@ -200,7 +201,7 @@
                 </div>
             </div>
         </section>
-        <section class="doors">
+        <section class="doors" id="doors">
             <div class="container">
                 <h2>Композитная дверь</h2>
                 <h4>Комплектация дверей может быть разная. Мы учтём все пожелания</h4>
@@ -268,7 +269,7 @@
                 </div>
             </div>
         </section>
-        <section class="services">
+        <section class="services" id="services">
             <div class="container">
                 <h2>Композитные двери 
                     идеально подходят для следующих объектов:
@@ -305,7 +306,7 @@
                 </div>
             </div>
         </section>
-        <section class="advantages">
+        <section class="advantages" id="advantages">
             <div class="container">
                 <h2>Преимущества композитных дверей</h2>
                 <div class="advantages__box">
@@ -361,7 +362,7 @@
                 </div>
             </div>
         </section>
-        <section class="company">
+        <section class="company" id="company">
             <div class="container">
                 <h2>О компании</h2>
                 <div class="company__wrap">
@@ -374,24 +375,24 @@
                         <img src="img/company.png" alt="">
                     </div>
                 </div>
-                <div class="company__bottom">
+                <div class="company__bottom" id="counter">
                     <div class="company__block">
                         <div class="company__num">
                             <p>Более</p>
-                            <span>9999</span>
+                            <span class="Fastnum">999</span>
                         </div>
                         <h6>Дверей поставлено нами</h6>
                     </div>
                     <div class="company__block">
                         <div class="company__num">
                             <p>Более</p>
-                            <span>99</span>
+                            <span class="Fastnum">99</span>
                         </div>
                         <h6>Дверей поставлено нашими клиентами</h6>
                     </div>
                     <div class="company__block">
                         <div class="company__num">
-                            <span>7</span>
+                            <span class="Fastnum">7</span>
                         </div>
                         <h6>лет работаем на рынке</h6>
                     </div>
@@ -447,7 +448,7 @@
                 </div>
             </div>
         </section>
-        <section class="contacts">
+        <section class="contacts" id="contacts">
             <div class="container">
                 <h2>Контакты</h2>
                 <div class="contacts__box">
@@ -561,17 +562,24 @@
     <script src="js/SmoothScroll.js"></script>
     <script src="slick-1.8.1/slick/slick.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+    <style>
+        .fancybox-content {
+            width: 100% !important;
+            height: 90% !important;
+            left: 50% !important;
+            top: 50% !important;
+            transform: translate(-50%, -50%) !important;
+        }
+        .fancybox-content img {
+            width: auto !important;
+            height: 80%;
+            left: 50% !important;
+            top: 50% !important;
+            transform: translate(-50%, -50%) !important;
+        }
+    </style>
     <script src="js/main.js"></script>
-    <script>
-        if (window.innerWidth < 768) {
-            $('.products__box').slick({
-                infinite: true,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                dots: false,
-                arrows: true
-            });
-        };        
-    </script>
 </body>
 </html>
